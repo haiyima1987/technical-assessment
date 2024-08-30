@@ -1,29 +1,22 @@
 <script setup lang="ts">
+import { storeToRefs } from 'pinia'
+import ProgressBar from './components/progress-bar.vue'
 import { appName } from '~/constants'
+import { useDomStore } from '~/stores/dom'
 
 useHead({
   title: appName,
 })
+
+const domStore = useDomStore()
+const { isLoading } = storeToRefs(domStore)
 </script>
 
 <template>
   <VitePwaManifest />
+  <ProgressBar v-show="isLoading" />
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
+  <app-error />
 </template>
-
-<style>
-html,
-body,
-#__nuxt {
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-}
-
-html.dark {
-  background: #222;
-  color: white;
-}
-</style>
