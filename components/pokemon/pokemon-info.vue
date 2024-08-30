@@ -14,8 +14,8 @@ function onClick() {
 </script>
 
 <template>
-  <div class="border-4 border-pink-600 flex flex-col rounded-lg bg-slate-800">
-    <header class="p-2  flex items-center bg-pink-950 border-b border-b-4 border-pink-600">
+  <div class="card border-pink-600 bg-slate-800">
+    <header class="card-header bg-pink-950 border-pink-600">
       <Icon name="ph:lightning-fill" class="mr-2 text-xl text-pink-700" />
       <h2 class="font-bold text-lg capitalize text-pink-700">
         <span v-if="!data">...</span>

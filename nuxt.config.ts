@@ -79,10 +79,15 @@ export default defineNuxtConfig({
     viewer: true,
   },
 
+  css: ['~/assets/css/main.css'],
+
   apiParty: {
     endpoints: {
       pokemon: {
         url: 'https://pokeapi.co/api/v2',
+      },
+      rickAndMorty: {
+        url: 'https://rickandmortyapi.com/api',
       },
     },
   },

@@ -279,3 +279,24 @@ interface Pokemon {
   types: Type[]
   weight: number
 }
+
+interface RickAndMorty {
+  created: string
+  episode: string[]
+  gender: string,
+  id: number
+  image: string
+  location: {
+    name: string
+    url: string
+  },
+  name: string
+  status: string
+  species: string
+  type: string
+  origin: {
+    name: string
+    url: string
+  },
+  url: string
+}

@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#__nuxt {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+html.dark {
+  background: #222;
+  color: white;
+}
+
+a, .link {
+  @apply hover:-translate-y-[1px];
+}
+
+@layer components {
+  .card {
+    @apply border border-4 flex flex-col rounded-lg hover:scale-[1.02] transition;
+  }
+
+  .list-elem {
+    @apply border border-4 flex rounded-lg hover:scale-[1.01] transition;
+  }
+
+  .card-header {
+    @apply p-2 flex items-center border-b border-b-4;
+  }
+
+  .list-elem-header {
+    @apply py-1.5 px-3 flex items-center border-b border-b-4;
+  }
+}
